@@ -1,75 +1,122 @@
-const CART_KEY = "quickcart_cart";
+import { toast } from "react-toastify";
 
+const CART_KEY = "quickcart_cart";
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const cartService = {
   async getCart() {
-    await delay(200);
-    const cartData = localStorage.getItem(CART_KEY);
-    return cartData ? JSON.parse(cartData) : [];
+    try {
+      await delay(200);
+      const cartData = localStorage.getItem(CART_KEY);
+      return cartData ? JSON.parse(cartData) : [];
+    } catch (error) {
+      console.error("Error getting cart:", error.message);
+      toast.error("Failed to load cart");
+      return [];
+    }
   },
 
   async addItem(productId, quantity = 1, priceAtAdd) {
-    await delay(250);
-    const cart = await this.getCart();
-    const existingItem = cart.find(item => item.productId === productId.toString());
-    
-    if (existingItem) {
-      existingItem.quantity += quantity;
-    } else {
-      cart.push({
-        productId: productId.toString(),
-        quantity,
-        priceAtAdd
-      });
+    try {
+      await delay(250);
+      const cart = await this.getCart();
+      const existingItem = cart.find(item => item.productId === productId.toString());
+      
+      if (existingItem) {
+        existingItem.quantity += quantity;
+      } else {
+        cart.push({
+          productId: productId.toString(),
+          quantity,
+          priceAtAdd
+        });
+      }
+      
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+      toast.success("Item added to cart");
+      return cart;
+    } catch (error) {
+      console.error("Error adding item to cart:", error.message);
+      toast.error("Failed to add item to cart");
+      return [];
     }
-    
-    localStorage.setItem(CART_KEY, JSON.stringify(cart));
-    return cart;
   },
 
   async updateQuantity(productId, newQuantity) {
-    await delay(200);
-    const cart = await this.getCart();
-    const itemIndex = cart.findIndex(item => item.productId === productId.toString());
-    
-    if (itemIndex === -1) {
-      throw new Error("Item not found in cart");
+    try {
+      await delay(200);
+      const cart = await this.getCart();
+      const itemIndex = cart.findIndex(item => item.productId === productId.toString());
+      
+      if (itemIndex === -1) {
+        toast.error("Item not found in cart");
+        throw new Error("Item not found in cart");
+      }
+      
+      if (newQuantity <= 0) {
+        cart.splice(itemIndex, 1);
+        toast.success("Item removed from cart");
+      } else {
+        cart[itemIndex].quantity = newQuantity;
+        toast.success("Cart updated");
+      }
+      
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+      return cart;
+    } catch (error) {
+      console.error("Error updating cart quantity:", error.message);
+      toast.error("Failed to update cart");
+      return [];
     }
-    
-    if (newQuantity <= 0) {
-      cart.splice(itemIndex, 1);
-    } else {
-      cart[itemIndex].quantity = newQuantity;
-    }
-    
-    localStorage.setItem(CART_KEY, JSON.stringify(cart));
-    return cart;
   },
 
   async removeItem(productId) {
-    await delay(200);
-    const cart = await this.getCart();
-    const filteredCart = cart.filter(item => item.productId !== productId.toString());
-    localStorage.setItem(CART_KEY, JSON.stringify(filteredCart));
-    return filteredCart;
+    try {
+      await delay(200);
+      const cart = await this.getCart();
+      const filteredCart = cart.filter(item => item.productId !== productId.toString());
+      localStorage.setItem(CART_KEY, JSON.stringify(filteredCart));
+      toast.success("Item removed from cart");
+      return filteredCart;
+    } catch (error) {
+      console.error("Error removing item from cart:", error.message);
+      toast.error("Failed to remove item");
+      return [];
+    }
   },
 
   async clearCart() {
-    await delay(200);
-    localStorage.removeItem(CART_KEY);
-    return [];
+    try {
+      await delay(200);
+      localStorage.removeItem(CART_KEY);
+      toast.success("Cart cleared");
+      return [];
+    } catch (error) {
+      console.error("Error clearing cart:", error.message);
+      toast.error("Failed to clear cart");
+      return [];
+    }
   },
 
   async getItemCount() {
-    await delay(150);
-    const cart = await this.getCart();
-    return cart.reduce((sum, item) => sum + item.quantity, 0);
+    try {
+      await delay(150);
+      const cart = await this.getCart();
+      return cart.reduce((sum, item) => sum + item.quantity, 0);
+    } catch (error) {
+      console.error("Error getting cart item count:", error.message);
+      return 0;
+    }
   },
 
   async getTotal() {
-    await delay(150);
-    const cart = await this.getCart();
-    return cart.reduce((sum, item) => sum + (item.quantity * item.priceAtAdd), 0);
+    try {
+      await delay(150);
+      const cart = await this.getCart();
+      return cart.reduce((sum, item) => sum + (item.quantity * item.priceAtAdd), 0);
+    } catch (error) {
+      console.error("Error calculating cart total:", error.message);
+      return 0;
+    }
   }
 };
