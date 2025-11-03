@@ -1,0 +1,67 @@
+[
+  {
+    "Id": 1,
+    "items": [
+      {
+        "productId": "1",
+        "quantity": 1,
+        "priceAtPurchase": 79.99
+      },
+      {
+        "productId": "3",
+        "quantity": 2,
+        "priceAtPurchase": 24.99
+      }
+    ],
+    "total": 129.97,
+    "shippingAddress": {
+      "firstName": "John",
+      "lastName": "Smith",
+      "address": "123 Main Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94105",
+      "country": "United States"
+    },
+    "billingInfo": {
+      "email": "john.smith@email.com",
+      "phone": "(555) 123-4567",
+      "address": "123 Main Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94105"
+    },
+    "status": "Delivered",
+    "orderDate": "2024-01-15T10:30:00.000Z"
+  },
+  {
+    "Id": 2,
+    "items": [
+      {
+        "productId": "5",
+        "quantity": 3,
+        "priceAtPurchase": 18.99
+      }
+    ],
+    "total": 56.97,
+    "shippingAddress": {
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "address": "456 Oak Avenue",
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "97205",
+      "country": "United States"
+    },
+    "billingInfo": {
+      "email": "sarah.j@email.com",
+      "phone": "(555) 987-6543",
+      "address": "456 Oak Avenue",
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "97205"
+    },
+    "status": "Shipped",
+    "orderDate": "2024-01-20T14:45:00.000Z"
+  }
+]

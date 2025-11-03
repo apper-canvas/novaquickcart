@@ -1,0 +1,258 @@
+[
+  {
+    "Id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "price": 79.99,
+    "description": "Premium wireless headphones with active noise cancellation, 30-hour battery life, and crystal-clear sound quality. Perfect for music, calls, and travel.",
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0",
+      "weight": "250g",
+      "chargingTime": "2 hours",
+      "driverSize": "40mm"
+    }
+  },
+  {
+    "Id": 2,
+    "name": "Ergonomic Office Chair",
+    "price": 299.99,
+    "description": "Comfortable ergonomic chair with lumbar support, adjustable height, and breathable mesh back. Ideal for long work sessions and maintaining good posture.",
+    "category": "Furniture",
+    "imageUrl": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "material": "Mesh and fabric",
+      "weightCapacity": "300 lbs",
+      "adjustability": "Height, armrests, tilt",
+      "warranty": "5 years",
+      "assembly": "Required"
+    }
+  },
+  {
+    "Id": 3,
+    "name": "Organic Cotton T-Shirt",
+    "price": 24.99,
+    "description": "Soft, breathable organic cotton t-shirt in classic fit. Made from sustainably sourced materials with a comfortable, durable design for everyday wear.",
+    "category": "Clothing",
+    "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "material": "100% Organic Cotton",
+      "fit": "Classic",
+      "careInstructions": "Machine wash cold",
+      "sizes": "XS-XXL",
+      "origin": "Made in USA"
+    }
+  },
+  {
+    "Id": 4,
+    "name": "Smart Fitness Watch",
+    "price": 199.99,
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, sleep tracking, and 7-day battery life. Compatible with iOS and Android devices.",
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    "inStock": false,
+    "specifications": {
+      "display": "1.4 inch AMOLED",
+      "batteryLife": "7 days",
+      "waterResistant": "50M",
+      "sensors": "Heart rate, GPS, accelerometer",
+      "compatibility": "iOS 10+, Android 6+"
+    }
+  },
+  {
+    "Id": 5,
+    "name": "Premium Coffee Beans",
+    "price": 18.99,
+    "description": "Single-origin arabica coffee beans, medium roast with notes of chocolate and caramel. Freshly roasted and ethically sourced from Colombian highlands.",
+    "category": "Food",
+    "imageUrl": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "origin": "Colombian Highlands",
+      "roastLevel": "Medium",
+      "weight": "12 oz (340g)",
+      "flavorNotes": "Chocolate, caramel",
+      "processing": "Washed"
+    }
+  },
+  {
+    "Id": 6,
+    "name": "Minimalist Desk Lamp",
+    "price": 49.99,
+    "description": "Modern LED desk lamp with adjustable brightness, USB charging port, and sleek aluminum design. Energy-efficient and eye-friendly lighting.",
+    "category": "Furniture",
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "lightSource": "LED",
+      "brightness": "Adjustable (100-2000 lux)",
+      "colorTemperature": "3000K-6000K",
+      "usbPort": "Yes (5V/1A)",
+      "material": "Aluminum alloy"
+    }
+  },
+  {
+    "Id": 7,
+    "name": "Yoga Mat Premium",
+    "price": 39.99,
+    "description": "Non-slip yoga mat made from eco-friendly TPE material. Provides excellent cushioning and grip for all types of yoga practice and floor exercises.",
+    "category": "Sports",
+    "imageUrl": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "material": "TPE (eco-friendly)",
+      "thickness": "6mm",
+      "dimensions": "72\" x 24\"",
+      "weight": "2.2 lbs",
+      "texture": "Non-slip surface"
+    }
+  },
+  {
+    "Id": 8,
+    "name": "Ceramic Plant Pot Set",
+    "price": 34.99,
+    "description": "Set of 3 handcrafted ceramic planters with drainage holes and matching saucers. Perfect for herbs, succulents, and small houseplants.",
+    "category": "Home",
+    "imageUrl": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "material": "Ceramic",
+      "sizes": "Small (4\"), Medium (6\"), Large (8\")",
+      "drainage": "Holes included",
+      "saucers": "Matching set included",
+      "finish": "Matte glaze"
+    }
+  },
+  {
+    "Id": 9,
+    "name": "Wireless Phone Charger",
+    "price": 29.99,
+    "description": "Fast wireless charging pad compatible with Qi-enabled devices. Sleek design with LED indicator and overcharge protection for safe charging.",
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "chargingSpeed": "10W fast charge",
+      "compatibility": "Qi-enabled devices",
+      "ledIndicator": "Yes",
+      "safetyFeatures": "Overcharge, overheat protection",
+      "dimensions": "4\" x 4\" x 0.4\""
+    }
+  },
+  {
+    "Id": 10,
+    "name": "Artisan Scented Candle",
+    "price": 22.99,
+    "description": "Hand-poured soy wax candle with vanilla and sandalwood fragrance. Burns cleanly for up to 45 hours in a reusable glass jar.",
+    "category": "Home",
+    "imageUrl": "https://images.unsplash.com/photo-1602874801006-e26c0d4d9806?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "waxType": "100% soy wax",
+      "fragrance": "Vanilla & sandalwood",
+      "burnTime": "45 hours",
+      "container": "Reusable glass jar",
+      "wick": "Cotton wick"
+    }
+  },
+  {
+    "Id": 11,
+    "name": "Leather Wallet",
+    "price": 59.99,
+    "description": "Handcrafted genuine leather wallet with RFID blocking technology. Features multiple card slots, bill compartment, and coin pocket.",
+    "category": "Accessories",
+    "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "material": "Genuine leather",
+      "rfidBlocking": "Yes",
+      "cardSlots": "8",
+      "billCompartment": "2",
+      "coinPocket": "Yes"
+    }
+  },
+  {
+    "Id": 12,
+    "name": "Stainless Steel Water Bottle",
+    "price": 19.99,
+    "description": "Double-walled vacuum insulated water bottle that keeps drinks cold for 24 hours or hot for 12 hours. BPA-free with leak-proof design.",
+    "category": "Sports",
+    "imageUrl": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "capacity": "32 oz (946ml)",
+      "material": "Stainless steel",
+      "insulation": "Double-wall vacuum",
+      "coldRetention": "24 hours",
+      "hotRetention": "12 hours"
+    }
+  },
+  {
+    "Id": 13,
+    "name": "Bluetooth Speaker",
+    "price": 89.99,
+    "description": "Portable wireless speaker with 360-degree sound, waterproof design, and 20-hour battery life. Perfect for outdoor adventures and parties.",
+    "category": "Electronics",
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "batteryLife": "20 hours",
+      "waterRating": "IPX7",
+      "connectivity": "Bluetooth 5.0",
+      "sound": "360-degree audio",
+      "range": "100 feet"
+    }
+  },
+  {
+    "Id": 14,
+    "name": "Kitchen Knife Set",
+    "price": 129.99,
+    "description": "Professional 8-piece knife set with high-carbon stainless steel blades, ergonomic handles, and wooden storage block.",
+    "category": "Kitchen",
+    "imageUrl": "https://images.unsplash.com/photo-1591529792234-0d6c5bb56deb?w=500&h=500&fit=crop",
+    "inStock": false,
+    "specifications": {
+      "pieces": "8 knives + block",
+      "bladeMaterial": "High-carbon stainless steel",
+      "handles": "Ergonomic polymer",
+      "storage": "Wooden block included",
+      "maintenance": "Hand wash recommended"
+    }
+  },
+  {
+    "Id": 15,
+    "name": "Reading Glasses",
+    "price": 24.99,
+    "description": "Stylish blue light blocking reading glasses with anti-reflective coating. Reduces eye strain from digital screens and improves sleep quality.",
+    "category": "Accessories",
+    "imageUrl": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "lensType": "Blue light blocking",
+      "coating": "Anti-reflective",
+      "frameStyle": "Classic rectangular",
+      "strength": "Available in 1.0-3.0",
+      "material": "TR90 polymer frame"
+    }
+  },
+  {
+    "Id": 16,
+    "name": "Memory Foam Pillow",
+    "price": 44.99,
+    "description": "Contour memory foam pillow with cooling gel layer and bamboo cover. Provides optimal neck and spine alignment for better sleep.",
+    "category": "Home",
+    "imageUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=500&h=500&fit=crop",
+    "inStock": true,
+    "specifications": {
+      "material": "Memory foam with cooling gel",
+      "cover": "Bamboo fiber",
+      "shape": "Contour design",
+      "firmness": "Medium-firm",
+      "size": "Standard (24\" x 16\")"
+    }
+  }
+]
