@@ -162,7 +162,7 @@ const params = {
           category_c: productData.category || '',
           description_c: productData.description || '',
           imageUrl_c: productData.imageUrl || '',
-          in_stock_c: productData.inStock || false,
+in_stock_c: productData.inStock || false,
           price_c: productData.price || 0,
           specifications_c: typeof productData.specifications === 'object' ? JSON.stringify(productData.specifications) : (productData.specifications || "")
         }]
@@ -228,8 +228,8 @@ const params = {
       if (productData.description !== undefined) updateFields.description_c = productData.description;
       if (productData.imageUrl !== undefined) updateFields.imageUrl_c = productData.imageUrl;
 if (productData.price !== undefined) updateFields.price_c = productData.price;
-      if (productData.in_stock !== undefined) updateFields.in_stock_c = productData.in_stock;
-      if (productData.specifications !== undefined) updateFields.specifications_c = productData.specifications;
+      if (productData.in_stock_c !== undefined) updateFields.in_stock_c = productData.in_stock_c;
+      if (productData.specifications_c !== undefined) updateFields.specifications_c = productData.specifications_c;
 
       const params = {
         records: [updateFields]
