@@ -1,4 +1,6 @@
 import { toast } from "react-toastify";
+import React from "react";
+import Error from "@/components/ui/Error";
 
 export const productService = {
   async getAll() {
@@ -153,7 +155,7 @@ export const productService = {
         apperPublicKey: import.meta.env.VITE_APPER_PUBLIC_KEY
       });
       
-      const params = {
+const params = {
         records: [{
           Name: productData.name || '',
           name_c: productData.name || '',
@@ -162,7 +164,7 @@ export const productService = {
           imageUrl_c: productData.imageUrl || '',
           in_stock_c: productData.inStock || false,
           price_c: productData.price || 0,
-          specifications_c: JSON.stringify(productData.specifications || {})
+          specifications_c: typeof productData.specifications === 'object' ? JSON.stringify(productData.specifications) : (productData.specifications || "")
         }]
       };
       
@@ -225,10 +227,10 @@ export const productService = {
       if (productData.category !== undefined) updateFields.category_c = productData.category;
       if (productData.description !== undefined) updateFields.description_c = productData.description;
       if (productData.imageUrl !== undefined) updateFields.imageUrl_c = productData.imageUrl;
-      if (productData.inStock !== undefined) updateFields.in_stock_c = productData.inStock;
-      if (productData.price !== undefined) updateFields.price_c = productData.price;
-      if (productData.specifications !== undefined) updateFields.specifications_c = JSON.stringify(productData.specifications);
-      
+if (productData.price !== undefined) updateFields.price_c = productData.price;
+      if (productData.in_stock !== undefined) updateFields.in_stock_c = productData.in_stock;
+      if (productData.specifications !== undefined) updateFields.specifications_c = productData.specifications;
+
       const params = {
         records: [updateFields]
       };
